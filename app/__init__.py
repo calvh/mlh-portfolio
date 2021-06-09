@@ -72,3 +72,8 @@ def resume():
         description=description,
         url=os.getenv("URL"),
     )
+    
+
+@app.errorhandler(404)
+def not_found(error_message):
+    return render_template('404.html', url=os.getenv("URL"))
