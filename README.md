@@ -1,17 +1,16 @@
-# Flask-Blog
+# Portfolio Template
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
- 
+A template for a personal portfolio built with Flask.
 
 ## Installation
 
-Make sure you have python3 and pip installed
+Make sure you have python3 and pip installed.
 
+Create and activate a virtual environment using the `venv` module.
 
-Create and activate virtual environment using virtualenv
 ```bash
-$ python -m venv python3-virtualenv
-$ source python3-virtualenv/bin/activate
+$ python -m venv .venv
+$ source .venv/bin/activate
 ```
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
@@ -20,19 +19,20 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dep
 pip install -r requirements.txt
 ```
 
+Note that on certain Linux distros it may be necessary to use `python3` and `pip3` instead.
+
 ## Usage
 
+Create a `.env` file using the `example.env` file as a template.
 
-Create a .env file using the example.env template
+Start the Flask development server with:
 
-
-Start flask development server
 ```bash
-$ export FLASK_ENV=development
 $ flask run
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Team
 
-Please make sure to update tests as appropriate.
+[Carolina Cardozo](https://github.com/CaroCardozo)
+[Josue Rosales](https://github.com/RFX14)
+[Calvin Ho](https://github.com/calvh)
