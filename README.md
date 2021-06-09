@@ -31,8 +31,16 @@ Start the Flask development server with:
 $ flask run
 ```
 
+## Testing
+
+Install `pytest`, then run it from the project root with:
+
+```bash
+$ pytest
+```
+
 ## Team
 
-[Carolina Cardozo](https://github.com/CaroCardozo)
-[Josue Rosales](https://github.com/RFX14)
-[Calvin Ho](https://github.com/calvh)
+- [Carolina Cardozo](https://github.com/CaroCardozo)
+- [Josue Rosales](https://github.com/RFX14)
+- [Calvin Ho](https://github.com/calvh)
