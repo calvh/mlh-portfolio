@@ -8,19 +8,36 @@ app = Flask(__name__)
 nav = Navigation(app)
 
 nav.Bar('top', [
-    nav.Item('Calvin', 'index', {'person': 'Calvin'}),
-    nav.Item('Josue', 'index', {'person': 'Josue'}),
-    nav.Item('Carolina', 'index', {'person': 'Carolina'})])
+    nav.Item('About Me', 'index'),
+    nav.Item('Projects', 'projects'),
+    nav.Item('Contact Me', 'contact'),
+    nav.Item('Resume', 'resume')])
 
-@app.route('/', defaults={'person':'Miyabi'})
-@app.route('/<person>')
-def index(person):
-    profile_picture = {'Miyabi': './static/img/miyabi.jpg',
-                'Josue': './static/img/miyabi.jpg',
-                 'Carolina': './static/img/logo.jpg',
-                 'Calvin': './static/img/logo.jpg'}
-    description = {'Miyabi': 'Hi I\'m Miyabi Serizawa from the manga Domestic Girlfriend',
-                'Josue': 'Howdy I\'m Josue from Texas',
-                 'Carolina': 'Hello I\'m Caro from Mexico',
-                 'Calvin': 'Hellow I\'m Cal from Canada'}
+@app.route('/')
+@app.route('/about')
+def index():
+    person = 'Miyabi'
+    profile_picture = './static/img/miyabi.jpg'
+    description = 'about me'
     return render_template('index.html', title=person, profile_picture=profile_picture , description=description, url=os.getenv("URL"))
+
+@app.route('/projects')
+def projects():
+    title = 'Projects'
+    profile_picture = './static/img/miyabi.jpg'
+    description = 'Project'
+    return render_template('projects.html', title=person, profile_picture=profile_picture , description=description, url=os.getenv("URL"))
+
+@app.route('/contact')
+def contact():
+    person = 'Contact'
+    profile_picture = './static/img/miyabi.jpg'
+    description = 'contact'
+    return render_template('contact.html', title=person, profile_picture=profile_picture , description=description, url=os.getenv("URL"))
+
+@app.route('/resume')
+def resume():
+    person = 'Resume'
+    profile_picture = './static/img/miyabi.jpg'
+    description = 'Resume'
+    return render_template('resume.html', title=person, profile_picture=profile_picture , description=description, url=os.getenv("URL"))
