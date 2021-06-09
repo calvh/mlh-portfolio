@@ -32,9 +32,17 @@
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+            <img src={{ profile_picture[title] }}>
         </div>
         <h1>{{ title }}</h1>
+        <ul>
+            {% for item in nav.top %}
+            <li class="{{ 'active' if item.is_active else '' }}">
+                <a href="{{ item.url }}">{{ item.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <h2>{{ description[title] }}</h2>
     </div>
 </body>
 </html>
