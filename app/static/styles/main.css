@@ -98,7 +98,7 @@ body {
 
 
 /*Everything down below is regarding the menubar*/
-ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -106,16 +106,16 @@ ul {
   background-color: #333;
 }
 
-li {
+header li {
   float: left;
   border-right:1px solid #bbb;
 }
 
-li:last-child {
+header li:last-child {
   border-right: none;
 }
 
-li a {
+header li a {
   display: block;
   color: white;
   text-align: center;
@@ -123,7 +123,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+header li a:hover:not(.active) {
   background-color: #111;
 }
 
