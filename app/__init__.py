@@ -12,7 +12,11 @@ nav.Bar('top', [
     nav.Item('Josue', 'index', {'person': 'Josue'}),
     nav.Item('Carolina', 'index', {'person': 'Carolina'})])
 
-@app.route('/', defaults={'person':'Miyabi'})
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html', url=os.getenv("URL"))
+
 @app.route('/<person>')
 def index(person):
     profile_picture = {'Miyabi': './static/img/miyabi.jpg',
