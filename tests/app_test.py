@@ -26,3 +26,8 @@ def test_contact(client):
 def test_resume(client):
     response = client.get("/resume/", content_type="html/text")
     assert response.status_code == 200
+
+
+def test_resume(client):
+    response = client.get("/oops/", content_type="html/text")
+    assert response.status_code == 404
