@@ -1,4 +1,11 @@
+
 # Portfolio Template
+
+![License](https://img.shields.io/github/license/calvh/mlh-portfolio)
+![Open Issues](https://img.shields.io/github/issues-raw/calvh/mlh-portfolio)
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/calvh/mlh-portfolio)
+![Open PRs](https://img.shields.io/github/issues-pr-raw/calvh/mlh-portfolio)
+![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/calvh/mlh-portfolio)
 
 A template for a personal portfolio built with Flask.
 
