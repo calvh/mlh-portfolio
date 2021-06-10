@@ -2,10 +2,21 @@
 {% set active_page = "contact" %}
 
 {% block content %}
-<div style="text-align:center;font-size:2em;padding:20px;">
-        <div>Email: <a href="mailto:serizawa.miyabi@meiji.ac.jp">serizawa.miyabi@meiji.ac.jp</a></div>
-        <div>Phone: +81 90 3053 9053</div>
-        <div><a href="https://github.com/miyabiserizawa">GitHub</a></div>
-        <div><a href="https://www.linkedin.com/in/miyabiserizawa">LinkedIn</a></div>
+<div class="container fs-2 d-grid gap-3 text-center">
+        <div class="">
+                <i class="bi bi-telephone-fill"></i> <span>+81 90 3053 9053</span>
+        </div>
+        <div>
+                <i class="bi bi-envelope-fill"></i> <a class="link-dark"
+                        href="mailto:serizawa.miyabi@meiji.ac.jp">serizawa.miyabi@meiji.ac.jp</a>
+        </div>
+        <div>
+                <i class=" bi-github" role="img" aria-label="GitHub"></i> <a href="https://github.com/miyabiserizawa"
+                        class="link-dark"> GitHub</a>
+        </div>
+        <div>
+                <i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/miyabiserizawa"
+                        class="link-dark">LinkedIn</a>
+        </div>
 </div>
 {% endblock %}
