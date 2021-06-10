@@ -10,4 +10,4 @@ app.register_blueprint(portfolio)
 
 @app.errorhandler(404)
 def not_found(error_message):
-    return render_template("404.html")
+    return render_template("404.html"), 404
