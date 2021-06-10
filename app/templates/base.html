@@ -14,25 +14,35 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <link lang='sass' rel="stylesheet" href="/static/styles/main.css">
+    <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
     <title>{{ title }}</title>
 </head>
 
 <body>
+
     <header class="nav-bar">
         <div class="nav-content">
             <ul>
                 <a href="/">
                     <div class="nav-logo">
-                        <img src="./static/img/logo.svg" />
+                        <img src="/static/img/logo.svg" />
                     </div>
                 </a>
-                {% for item in nav.top %}
-                <li class="{{ 'active' if item.is_active else '' }}">
-                    <a href="{{ item.url }}">{{ item.label }}</a>
-                </li>
-                {% endfor %}
+                {% set navigation_bar = [
+                ('/', 'index', 'About'),
+                ('/projects/','projects', 'Projects'),
+                ('/contact/', 'contact', 'Contact'),
+                ('/resume/', 'resume','Resume')
+                ] -%}
+                {% set active_page = active_page|default('index') -%}
+
+                <ul>
+                    {% for href, id, caption in navigation_bar %}
+                    <li{% if id==active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption|e }}</a>
+                        </li>
+                        {% endfor %}
+                </ul>
             </ul>
 
         </div>
@@ -40,7 +50,7 @@
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src={{ profile_picture }}>
+            <img src="/static/img/miyabi.jpg">
         </div>
         <h1>{{ title }}</h1>
         <h2>{{ description[title] }}</h2>
