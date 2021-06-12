@@ -7,7 +7,7 @@
 ![Open PRs](https://img.shields.io/github/issues-pr-raw/calvh/mlh-portfolio)
 ![Closed PRs](https://img.shields.io/github/issues-pr-closed-raw/calvh/mlh-portfolio)
 
-A template for a personal portfolio built with Flask.
+A template for a personal portfolio built with Flask. See it on [Heroku](https://mlh-portfolio.herokuapp.com/).
 
 ## Installation
 
